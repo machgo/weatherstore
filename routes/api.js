@@ -56,7 +56,7 @@ exports.getLastDay = function(req, res){
             diff.setMinutes(0);
             diff = new Date(hour - diff);
             var pos = 23 - (diff.getTime()/(60 * 60 * 1000));
-            rainmm[pos] += items[i].rainmm +1;
+            rainmm[pos] += items[i].rainmm;
         }
 
         output.rainmm = rainmm;
