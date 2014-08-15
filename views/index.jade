@@ -1,17 +1,33 @@
 extends layout
 
 block content
-    h1= title
-    p Weather in  #{title}
-    script(src="/javascripts/graphs.js")
-    #leftcolumn
-        #tempcgraph(style="width:100%; height:400px;")
-        #raingraph(style="width:100%; height:400px;")
-        #winddirgraph(style="width:100%; height:400px;")
-        #light_lvlgraph(style="width:100%; height:400px;")
+    #toprow
+        table#currentTable
+            tr
+                th Temperature
+                th Pressure
+                th Humidity
+                th Wind
+                th Last Update
+            tr
+                td#currentTemp 0
+                td#currentPressure 0
+                td#currentHumidity 0
+                td#currentWind 0
+                td#lastUpdate 0
+    #bottomrow
+        #leftcolumn
+            #tempcgraph(style="width:100%; height:400px;")
+            #raingraph(style="width:100%; height:400px;")
+            #winddirgraph(style="width:100%; height:400px;")
+            #light_lvlgraph(style="width:100%; height:400px;")
 
-    #rightcolumn
-        #pressuregraph(style="width:100%; height:400px;")
-        #humiditygraph(style="width:100%; height:400px;")
-        #windspeedkmhgraph(style="width:100%; height:400px;")
-        #batt_lvlgraph(style="width:100%; height:400px;")
+        #rightcolumn
+            #pressuregraph(style="width:100%; height:400px;")
+            #humiditygraph(style="width:100%; height:400px;")
+            #windspeedkmhgraph(style="width:100%; height:400px;")
+            #batt_lvlgraph(style="width:100%; height:400px;")
+
+    script(src="/javascripts/graphs.js")
+    script(src="/javascripts/gauges.js")
+    script(src="/javascripts/main.js")

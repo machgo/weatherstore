@@ -35,6 +35,7 @@ app.get('/', routes.index);
 app.get('/api', api.getData);
 app.post('/api', api.addData);
 app.get('/api/lastday', api.getLastDay);
+app.get('/api/current', api.getCurrent);
 
 
 /// catch 404 and forwarding to error handler
