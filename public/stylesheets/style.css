@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+#leftcolumn {
+    float: left;
+    width: 50%;
+}
+#rightcolumn {
+    float: right;
+    width: 50%;
+}

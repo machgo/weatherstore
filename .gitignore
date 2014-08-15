@@ -35,4 +35,6 @@ Icon
 .Spotlight-V100
 .Trashes
 
+#Node-Stuff
 node_modules/
+npm-debug.log
