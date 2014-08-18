@@ -77,5 +77,4 @@ exports.getCurrent = function(req, res){
     var query = db.collection('weatherdata').find().sort({_id: -1}).limit(1).toArray(function(err, items){
         res.json(items[0]);
     });
-
 }
