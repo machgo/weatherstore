@@ -59,7 +59,7 @@ exports.getLastDay = function(req, res){
             rainmm[pos] += items[i].rainmm;
         }
 
-        output.rainmm = rainmm;
+        output.rainmm = rainmm
 
         for (var i=0; i<24; i++)
         {
