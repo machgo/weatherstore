@@ -38,14 +38,14 @@ app.get('/api/lastday', api.getLastDay);
 app.get('/api/current', api.getCurrent);
 
 
-/// catch 404 and forwarding to error handler
+// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
-/// error handlers
+// error handlers
 app.use(function(err, req, res, next) {
     res.render('error', {
         message: err.message,
